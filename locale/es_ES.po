@@ -1,0 +1,55 @@
+# 
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:sale.opportunity,phase:"
+msgid "Phase"
+msgstr "Fase"
+
+msgctxt "field:sale.opportunity.phase,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:sale.opportunity.phase,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:sale.opportunity.phase,id:"
+msgid "ID"
+msgstr "Identificador"
+
+msgctxt "field:sale.opportunity.phase,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:sale.opportunity.phase,rec_name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:sale.opportunity.phase,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:sale.opportunity.phase,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "model:ir.action,name:act_phase"
+msgid "Phases"
+msgstr "Fases"
+
+msgctxt "model:ir.ui.menu,name:menu_phase"
+msgid "Phases"
+msgstr "Fases"
+
+msgctxt "model:sale.opportunity.phase,name:"
+msgid "Phase"
+msgstr "Fase"
+
+msgctxt "view:sale.opportunity.phase:"
+msgid "Phase"
+msgstr "Fase"
+
+msgctxt "view:sale.opportunity.phase:"
+msgid "Phases"
+msgstr "Fases"

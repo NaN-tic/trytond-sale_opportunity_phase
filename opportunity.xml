@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<!-- The COPYRIGHT file at the top level of this repository contains the full
+     copyright notices and license terms. -->
+<tryton>
+    <data>
+        <!-- sale.opportunity.campaign -->
+        <record model="ir.ui.view" id="phase_form_view">
+            <field name="model">sale.opportunity.phase</field>
+            <field name="type">form</field>
+            <field name="name">phase_form</field>
+        </record>
+
+        <record model="ir.ui.view" id="phase_tree_view">
+            <field name="model">sale.opportunity.phase</field>
+            <field name="type">tree</field>
+            <field name="name">phase_tree</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_phase">
+            <field name="name">Phases</field>
+            <field name="res_model">sale.opportunity.phase</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_phase_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="phase_tree_view"/>
+            <field name="act_window" ref="act_phase"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_phase_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="phase_form_view"/>
+            <field name="act_window" ref="act_phase"/>
+        </record>
+
+        <record model="ir.model.access" id="access_phase">
+            <field name="model"
+                search="[('model', '=', 'sale.opportunity.phase')]"/>
+            <field name="group" ref="sale_opportunity.group_opportunity"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+
+        <!-- sale.opportunity -->
+        <record model="ir.ui.view" id="sale_opportunity_form_view">
+            <field name="model">sale.opportunity</field>
+            <field name="inherit" ref="sale_opportunity.opportunity_view_form"/>
+            <field name="name">sale_opportunity_form</field>
+        </record>
+        <record model="ir.ui.view" id="sale_opportunity_tree_view">
+            <field name="model">sale.opportunity</field>
+            <field name="inherit" ref="sale_opportunity.opportunity_view_tree"/>
+            <field name="name">sale_opportunity_tree</field>
+        </record>
+
+
+        <!-- Menus -->
+        <menuitem action="act_phase" id="menu_phase"
+            parent="sale.menu_configuration" sequence="1"/>
+    </data>
+</tryton>
